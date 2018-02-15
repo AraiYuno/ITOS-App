@@ -1,0 +1,34 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="@string/search_title"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always|withText">
+    </item>
+
+    <item
+        android:id="@+id/menu_search_options"
+        android:checkable="false"
+        android:enabled="true"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:title="Options"
+        app:showAsAction="always">
+
+        <menu>
+            <item
+                android:id="@+id/menuSearchID"
+                android:title="Search by ID"
+                app:showAsAction="always"/>
+            <item
+                android:id="@+id/menuSearchName"
+                android:title="Search by Name"
+                app:showAsAction="always"/>
+        </menu>
+    </item>
+
+
+
+</menu>

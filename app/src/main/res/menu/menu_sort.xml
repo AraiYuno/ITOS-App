@@ -1,0 +1,39 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_sort_options"
+        android:enabled="true"
+        android:icon="@android:drawable/ic_menu_sort_by_size"
+        android:title="@string/sort_title"
+        app:showAsAction="always">
+
+        <menu>
+            <item
+                android:id="@+id/menuSortAll"
+                android:title="All Orders"
+                app:showAsAction="always"/>
+
+            <item
+                android:id="@+id/menuSortApproved"
+                android:title="Approved"
+                app:showAsAction="always"/>
+
+            <item
+                android:id="@+id/menuSortCancelled"
+                android:title="Cancelled"
+                app:showAsAction="always"/>
+
+            <item
+                android:id="@+id/menuSortNonCancelled"
+                android:title="All Non-Cancelled"
+                app:showAsAction="always"/>
+
+            <item
+                android:id="@+id/menuSortRejected"
+                android:title="Rejected"
+                app:showAsAction="always"/>
+        </menu>
+    </item>
+
+</menu>

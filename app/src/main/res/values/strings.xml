@@ -1,0 +1,61 @@
+<resources>
+    <!--Titles-->
+    <string name="app_name">InventoryTracker</string>
+    <string name="title_activity_home">Log-In</string>
+    <string name="title_activity_inventory">Inventory</string>
+    <string name="title_activity_orders">Orders</string>
+    <string name="title_activity_order_details">Order Details</string>
+    <string name="title_activity_create_order">New Order</string>
+
+    <string name="Inventory">Inventory</string>
+    <string name="Orders">Orders</string>
+    <string name="InventoryList">Inventory List</string>
+    <string name="OrderList">Order List</string>
+
+    <!--Product information-->
+    <string name="ProductID">ID</string>
+    <string name="ProductName">Product Name</string>
+    <string name="ProductCategory">Category</string>
+    <string name="ProductPrice">Price</string>
+    <string name="ProductQuantity">Quantity</string>
+
+    <!--Functions-->
+    <string name="Create">Create</string>
+    <string name="Delete">Delete</string>
+    <string name="Update">Update</string>
+    <string name="Clear">Reset</string>
+    <string name="ApproveOrder">Approve</string>
+    <string name="CancelOrder">Cancel</string>
+    <string name="RejectOrder">Reject</string>
+    <string name="OrderDetails">Details</string>
+    <string name="NewOrder">New Order</string>
+
+    <!--Order Display-->
+    <string name="PriceDisplay">Total Price: </string>
+    <string name="OrderNumberDisplay">Order No. </string>
+    <string name="OrderStatus">Status</string>
+    <string name="UpdateQuantity">Update</string>
+
+    <!--Messages-->
+    <string name="fatalError">Fatal error</string>
+    <string name="notification">Notification</string>
+    <string name="warning">Warning</string>
+
+    <!--Search choices-->
+    <string-array name="search_options">
+        <item>ID</item>
+        <item>Name</item>
+    </string-array>
+    <string name="search_title">Search</string>
+
+    <!--Sort choices-->
+    <string-array name="sort_orders">
+        <item>Approved</item>
+        <item>Reject</item>
+        <item>All Orders</item>
+        <item>Cancel</item>
+        <item>Non Cancelled</item>
+    </string-array>
+    <string name="sort_title">Sort</string>
+
+</resources>

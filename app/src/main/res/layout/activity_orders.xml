@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+
+    tools:context = "comp3350.g16.inventorytracking.presentation.OrdersActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewOrderList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/OrderList"
+            android:textAlignment="viewStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Title"
+            android:visibility="gone"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="0dp"/>
+
+        <ListView
+            android:id="@+id/listOrders"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:choiceMode="singleChoice"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/buttonApproveOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="buttonOrderApproveOnClick"
+                android:text="@string/ApproveOrder"/>
+
+            <Button
+                android:id="@+id/buttonRejectOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/buttonApproveOrder"
+                android:onClick="buttonOrderRejectOnClick"
+                android:text="@string/RejectOrder"/>
+
+            <Button
+                android:id="@+id/buttonCancelOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/buttonRejectOrder"
+                android:onClick="buttonOrderCancelOnClick"
+                android:text="@string/CancelOrder"/>
+
+            <Button
+                android:id="@+id/buttonNonCancelled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_column="6"
+                android:layout_row="0"
+                android:onClick="buttonNonCancelledOnClick"
+                android:text="View Non Cancelled"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/buttonOrderDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:elevation="0dp"
+                android:onClick="buttonDetailsOnClick"
+                android:text="@string/OrderDetails"/>
+
+            <Button
+                android:id="@+id/buttonAllOrders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_column="4"
+                android:layout_row="1"
+                android:onClick="buttonViewAllOrders"
+                android:text="View All Orders"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

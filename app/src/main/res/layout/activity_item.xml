@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+
+    tools:context = "comp3350.g16.inventorytracking.presentation.ItemActivity"
+    android:weightSum="1">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textViewItemList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/InventoryList"
+            android:textAppearance="@android:style/TextAppearance.Material.Title"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="0dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"/>
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/listItems"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:choiceMode="singleChoice"/>
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="bottom"
+        android:visibility="visible">
+
+
+        <TextView
+            android:id="@+id/textViewProductID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/button2"
+            android:layout_alignBottom="@+id/button2"
+            android:layout_toStartOf="@+id/editProductID"
+            android:text="@string/ProductID"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"/>
+
+        <EditText
+            android:id="@+id/editProductID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/button2"
+            android:ems="10"
+            android:inputType="textNoSuggestions"/>
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:text="@string/ProductName"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"/>
+
+        <EditText
+            android:id="@+id/editProductName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:selectAllOnFocus="true"
+            android:inputType="textNoSuggestions"/>
+
+        <TextView
+            android:id="@+id/textViewCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:text="@string/ProductCategory"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"/>
+
+        <EditText
+            android:id="@+id/editCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:selectAllOnFocus="true"
+            android:inputType="textNoSuggestions"/>
+
+        <TextView
+            android:id="@+id/textViewPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="3"
+            android:text="@string/ProductPrice"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"/>
+
+        <EditText
+            android:id="@+id/editPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:selectAllOnFocus="true"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/textViewQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="4"
+            android:text="@string/ProductQuantity"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"/>
+
+        <EditText
+            android:id="@+id/editQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:selectAllOnFocus="true"
+            android:inputType="number"/>
+
+    </GridLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/buttonItemCreate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="buttonItemCreateOnClick"
+            android:text="@string/Create"/>
+
+        <Button
+            android:id="@+id/buttonItemUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/buttonItemCreate"
+            android:onClick="buttonItemUpdateOnClick"
+            android:text="@string/Update"/>
+
+        <Button
+            android:id="@+id/buttonItemDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/buttonItemUpdate"
+            android:onClick="buttonItemDeleteOnClick"
+            android:text="@string/Delete"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/buttonItemDelete"
+            android:onClick="buttonClearFieldsOnClick"
+            android:text="@string/Clear"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

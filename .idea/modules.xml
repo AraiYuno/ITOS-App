@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://C:\Users\Owner\Desktop\School\COMP 3350\InventoryTracking-master\InventoryTracking-master\InventoryTracking.iml" filepath="C:\Users\Owner\Desktop\School\COMP 3350\InventoryTracking-master\InventoryTracking-master\InventoryTracking.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InventoryTracking-master.iml" filepath="$PROJECT_DIR$/InventoryTracking-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+    </modules>
+  </component>
+</project>

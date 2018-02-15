@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="comp3350.g16.inventorytracking">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".presentation.LoginActivity"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".presentation.HomeActivity"
+            android:label="@string/title_activity_home">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="comp3350.g16.inventorytracking.presentation.HomeActivity"/>
+        </activity>
+
+
+        <!--searchable-->
+
+        <activity
+            android:name=".presentation.ItemActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:label="@string/title_activity_inventory">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="comp3350.g16.inventorytracking.presentation.ItemActivity"/>
+        </activity>
+
+        <activity
+            android:name=".presentation.OrdersActivity"
+            android:label="@string/title_activity_orders">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="comp3350.g16.inventorytracking.presentation.OrdersActivity"/>
+        </activity>
+
+        <activity
+            android:name=".presentation.OrderDetailsActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:label="@string/title_activity_order_details">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="comp3350.g16.inventorytracking.presentation.OrderDetailsActivity"/>
+        </activity>
+
+        <activity
+            android:name=".presentation.CreateOrdersActivity"
+            android:label="@string/title_activity_create_order">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="comp3350.g16.inventorytracking.presentation.CreateOrdersActivity"/>
+        </activity>
+
+    </application>
+
+</manifest>

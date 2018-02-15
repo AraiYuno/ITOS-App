@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+
+    tools:context="comp3350.g16.inventorytracking.presentation.CreateOrdersActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8"
+        android:orientation="horizontal">
+
+        <GridLayout
+            android:id="@+id/GridLayoutInventoryList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:columnCount="1"
+            android:rowCount="2">
+
+            <TextView
+                android:id="@+id/textViewInventoryList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/InventoryList"
+                android:textAppearance="@android:style/TextAppearance.Material.Headline"/>
+
+            <ListView
+                android:id="@+id/listViewInventoryOrderList"
+                android:choiceMode="singleChoice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </GridLayout>
+
+        <GridLayout
+            android:id="@+id/GridLayoutOrderList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:columnCount="1"
+            android:rowCount="2">
+
+            <TextView
+                android:id="@+id/textViewOrderList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/OrderNumberDisplay"
+                android:textAppearance="@android:style/TextAppearance.Material.Headline"/>
+
+            <ListView
+                android:id="@+id/listViewCreateOrderList"
+                android:choiceMode="singleChoice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </GridLayout>
+
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="2">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:text="Order Quantity"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"/>
+
+        <EditText
+            android:id="@+id/editOrderItemQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:ems="10"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:text="0"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:text="Total Price:"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"/>
+
+        <TextView
+            android:id="@+id/textViewOrderPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="3"
+            android:layout_row="1"
+            android:text="TOTAL PRICE"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"/>
+
+    </GridLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/buttonAddToOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:onClick="buttonAddToOrderOnClick"
+            android:text="Add"/>
+
+        <Button
+            android:id="@+id/buttonUpdateQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/buttonAddToOrder"
+            android:onClick="buttonUpdateQuantityOnClick"
+            android:text="Update"/>
+
+        <Button
+            android:id="@+id/buttonRemoveFromOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/buttonUpdateQuantity"
+            android:onClick="buttonRemoveFromOrderOnClick"
+            android:text="Remove"/>
+
+        <Button
+            android:id="@+id/buttonSaveOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/buttonRemoveFromOrder"
+            android:onClick="buttonSaveOrderOnClick"
+            android:text="Save Order"/>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:onClick="buttonClearFieldsOnClick"
+            android:text="Reset"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
